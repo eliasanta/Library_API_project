@@ -1,6 +1,6 @@
      
 //variabili const. Queste sono le URL delle API e non devono essere modificate
-const URL_LIBRI_FANTASY ="https://openlibrary.org/subjects/fantasy.json";
+
 const URL_DESCRIPTION="https://openlibrary.org"
 const URL_USERS = "https://jsonplaceholder.typicode.com/users";
 const URL_PHOTOS = "https://jsonplaceholder.typicode.com/photos";
@@ -16,16 +16,29 @@ var desc =new Description();
 var albums = new Albums();
 var todos = new Todo();
 
+//**************************************************************for sidebar */
 let ListaLibri = []; //creo variabile lista libri
 $(document).ready(function () {
     $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active');
     });
 });
+//*************************************************************************** */
+//************************************imposto un piccolo ritardo in quanto devono prima caricarsi gli script */
+const myTimeout = setTimeout(()=>{
+    document.getElementsByClassName("spinner-border")[0].style.display = "none";
+    let btn=document.getElementById('getListId');
+    btn.addEventListener('click',function () {
+        let targetValue = document.getElementById("subList").value;
+        //in base a quello selezionato in lista carico i libri
+        recuperaUtenti(targetValue);
+      });
+}, 100);
 
-window.addEventListener("load", function(){
+
+/*  window.addEventListener("load", function(){
     recuperaUtenti();
-})
+})  */
 /**
  * mostra il messaggio di errore nell'HTML
  * @param {string} message 
@@ -55,12 +68,12 @@ function searchTitle(){
 }
 
  
-async function recuperaUtenti(){
+async function recuperaUtenti(subject){
+    console.log(subject)
+    const URL_LIBRI =`https://openlibrary.org/subjects/${subject}.json`;
     document.getElementsByClassName("spinner-border")[0].style.display = "block"; // visualizza lo spinner che viene disattivato alla conclusione della chiamata. Riga 44
     try{
-        let libri = await api.getFetch(URL_LIBRI_FANTASY);
-        
-        //stampaUtenti(libri.works);
+        let libri = await api.getFetch(URL_LIBRI);
         printBooks(libri.works);
         searchTitle();
         
@@ -72,41 +85,15 @@ async function recuperaUtenti(){
         document.getElementsByClassName("spinner-border")[0].style.display = "none";
     }
 }
-//*******************************************************************************************non la sto usando */
-            function stampaUtenti(listaLibri){ //passato la lista di libri fantasy
-                //console.log(listaLibri)  
-                let str = "";
-                listaLibri.forEach(element => {
-                    str += "<tr>";
-                    str += recuperoInfoUser(element);
-                    str += "</tr>";
-                });
-                document.getElementById('userList').innerHTML = str;
-            
-            }
-            function recuperoInfoUser(element){//elemento singolo
-                str="";
-                str += "<td>"+ (element.title)+"</td>";
-                str += "<td>"+ buttonUser(element.key) + "</td>";
-                str += "<td>"+ element.authors.map((ele) => `<span>${ele.name}</span>`) +"</td>";
-                //console.log(element.key)//chiave singola
-                return str;
-            }
-            const buttonUser = function(key){//gli passo l'indirizzo completo
-                let str = "";    
-            // str += `<button class='btn btn-success' onclick='descriptionApiRequest("${key}")'>DESCRIPTION</button>`;
-            // str += `<button class='btn btn-success' data-bs-toggle="modal" data-bs-target="#modalDesc" onclick='showDescription("${key}")'>DESCRIPTION_test</button>`;
-                return str;
-            } 
-//******************************************************************************************************* */    
+
 
 function printBooks(elemResp){//passo oggetto completo fantasy
-    console.log(elemResp)
+    
     ListaLibri = elemResp;
     let str = `<h2 class="mb-3">Lista libri</h2>`;
     
     ListaLibri.forEach((elem) => {//lista libri completa
-      str += `<div class="card card-body mb-2">
+      str += `<div class="card card-body mb-2 mt-2">
                     <h3>${elem.title}</h3>
                     <p>elenco autori</p>
                     <ul id="listAuthor">
@@ -122,41 +109,7 @@ function printBooks(elemResp){//passo oggetto completo fantasy
     }
 
    
-    
-    /* function printBooksTest(elemResp){
-       
-        ListaLibri = elemResp.works;
-        ListaLibri.forEach((elem) => {
-            const card= userCardTemplate.content.cloneNode(true).children[0];
-            const header=card.querySelector('[data-header]');
-            const body=card.querySelector('[data-body]');
-            header.textContent=elem.title;
-            body.textContent=elem.authors.forEach(elem=>elem.name);
-            userCardContainer.append(card);
-
-
-        })
-
-    }
-     */
-
- /* const descriptionApiRequest = async (key) => {//questo funziona
-    //console.log(bookElements)
-    try {
-        
-        const url = `https://openlibrary.org${key}.json`;
-        const response = await api.getFetch(url);
-
-        const description=response.description
-        console.log(description)
-    
-    } catch (error) {
-        console.log(error)
-       log('ERROR: descriptionApiRequest function')
-      logErrors(error) 
-    }
-  }  */
-
+   
 
 //creo la funzione per mostrarmi la descrizione
  function showDescription(userKey) {//gli ho passato la chiave

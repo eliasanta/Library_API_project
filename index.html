@@ -7,11 +7,11 @@
         <title>Document</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>        
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     
@@ -47,111 +47,99 @@
             </div>
         </div>
         
-<!-- Modal -->
-<div class="wrapper">
-    <!-- Sidebar  -->
-    <nav id="sidebar">
-        <div class="sidebar-header">
-            <h3>Categorie Libri</h3>
-        </div>
+<!-- Modal sidebar-->
+        <div class="wrapper">
+            <!-- Sidebar  -->
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <h3>Categorie Libri</h3>
+                </div>
 
-        <ul class="list-unstyled components">
-            <p>Dummy Heading</p>
-            <li class="active">
-                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
-                <ul class="collapse list-unstyled" id="homeSubmenu">
-                    <li>
-                        <a  id="dance" value="dance">dance</a>
+                <ul class="list-unstyled components">
+                    <p>Dummy Heading</p>
+                    <li class="active">
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li>
+                                <a  id="dance" value="dance">dance</a>
+                            </li>
+                            <li>
+                                <a href="#">Home 2</a>
+                            </li>
+                            <li>
+                                <a href="#">Home 3</a>
+                            </li>
+                        </ul>
                     </li>
                     <li>
-                        <a href="#">Home 2</a>
+                        <a href="#">About</a>
                     </li>
                     <li>
-                        <a href="#">Home 3</a>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">tipo</a>
+                        
+                            <select id="subList" class="custom-select mr-sm-2" >
+                                
+                                <option id="dance"value="dance" >dance</option>
+                                <option id="fantasy"value="fantasy" selected>fantasy</option>
+                                
+                                <option id="horror"value="horror" >horror</option>
+                                <option id="architecture"value="architecture" >architecture</option>
+                                
+                            </select>
+                        
+                    </li>
+                    <li>
+                        <a href="#">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
                     </li>
                 </ul>
-            </li>
-            <li>
-                <a href="#">About</a>
-            </li>
-            <li>
-                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">tipo</a>
+                <div class="d-flex justify-content-center">
+                    <button  type="button" id="getListId" class="btn btn-info m-2">Get ListSelect</button> 
+                </div>
                 
-                    <select id="subList" class="custom-select mr-sm-2" >
-                    
-                        <option id="dance"value="dance" selected>dance</option>
-                        <option id="fantasy"value="fantasy">fantasy</option>
-                        <option id="design"value="design" >design</option>
+            </nav>
+
+            <!-- Page Content  -->
+            <div id="content">
+
+                <nav class="navbar mb-1 navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <button type="button" id="sidebarCollapse" class="btn btn-info">
+                                    <i class="fas fa-align-left"></i>
+                                    <span>Toggle Sidebar</span>
+                                </button>
+                            </div>
+                            <input type="text" class="form-control" id="searchTitle" placeholder="title" aria-label="" aria-describedby="basic-addon1">
+                        </div>
                         
-                    </select>
-                
-            </li>
-            <li>
-                <a href="#">Portfolio</a>
-            </li>
-            <li>
-                <a href="#">Contact</a>
-            </li>
-        </ul>
 
-        
-    </nav>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            
+                        </div>
+                    </div>
+                </nav>
+                <!-- content -->
+                <div class="container-fluid">
+                    <div class="row"> 
+                        <div class="col-md-10 offset-1 col-sm-12" style="height: 50px;text-align: center;">
+                            <div class="spinner-border" role="status" style="display:'none'; margin:auto">
+                            <span class="visually-hidden">Attendere...</span>
+                        </div>
+                    </div>
+                <!-- output card -->
+                    <div class="ml-2" id="output">
 
-    <!-- Page Content  -->
-    <div id="content">
-
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-
-                <button type="button" id="sidebarCollapse" class="btn btn-info">
-                    <i class="fas fa-align-left"></i>
-                    <span>Toggle Sidebar</span>
-                </button>
-                <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fas fa-align-justify"></i>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    </div>
                     
-                </div>
-            </div>
-        </nav>
-        <!-- content -->
-        <div class="container-fluid">
-            <div class="row"> 
-                <div class="col-md-10 offset-1 col-sm-12" style="height: 50px;text-align: center;">
-                    <div class="spinner-border" role="status" style="display:'none'; margin:auto">
-                    <span class="visually-hidden">Attendere...</span>
-                </div>
-            </div>
-            <!-- search-bar -->
-            <div class="row "  >
-                <h4>filter by Title:</h4>
-                <div class="form-group">
-                <input  type="text" class="form-control" id="searchTitle" placeholder="title" data-search>
-                </div>
-            </div>
-
-            <!-- test output card -->
-
-            <div class="user-card" data-user-cards-container></div>
-            <template data-user-template>
-                <div class="card">
-                    <div class="header "data-header></div>
-                    <div class="body" data-body></div>
-                    <button></button>
-                </div>
-            </template>
-
-            <!-- output cards -->
-            <div class="ml-2" id="output">
+                </div> 
 
             </div>
-            
-        </div> 
-
-    </div>
-</div>
+        </div>
   
 
     </body>
