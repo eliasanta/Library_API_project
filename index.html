@@ -14,15 +14,10 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>        
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    
+    <!-- script  -->
         <script src="js/request.js"></script>
         <script src="js/description.js"></script>
-        <script src="js/posts.js"></script>
-        <script src="js/albumImg.js"></script>
-        <script src="js/albums.js"></script>
-        <script src="js/todo.js"></script>
-        <script src="js/comments.js"></script>
-      
+        <script src="js/cover.js"></script>
         <script src="js/script.js"></script>
 
         <link rel="stylesheet" href="css/styleCss.css">
@@ -50,55 +45,133 @@
 <!-- Modal sidebar-->
         <div class="wrapper">
             <!-- Sidebar  -->
-            <nav id="sidebar">
+            <nav id="sidebar" data-toggle="collapse" >
                 <div class="sidebar-header">
                     <h3>Categorie Libri</h3>
                 </div>
 
                 <ul class="list-unstyled components">
-                    <p>Dummy Heading</p>
                     <li class="active">
-                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">ARTS</a>
                         <ul class="collapse list-unstyled" id="homeSubmenu">
                             <li>
-                                <a  id="dance" value="dance">dance</a>
+                                <a  id="architecture">Architecture</a>
                             </li>
                             <li>
-                                <a href="#">Home 2</a>
+                                <a  id="art__art_instruction">Art instruction</a>
+                            </li>
+                            <!-- <li>
+                                <a href="history_of_art__art__design_styles">Art history</a>
+                            </li> -->
+                            <li>
+                                <a  id="dance">Dance</a>
                             </li>
                             <li>
-                                <a href="#">Home 3</a>
+                                <a  id="design">Design</a>
                             </li>
+                           <!--  <li>
+                                <a href="fashion">Fashion</a>
+                            </li> -->
+                            <li>
+                                <a  id="film">Film</a>
+                            </li>
+                            <li>
+                                <a  id="graphic_design">Graphic Design</a>
+                            </li>
+                            <!-- <li>
+                                <a href="music">Music</a>
+                            </li> -->
+                            <li>
+                                <a  id="music_theory">Music Theory</a>
+                            </li>
+                            <li>
+                                <a  id="graphic_design">Graphic Design</a>
+                            </li>
+                            <!-- <li>
+                                <a href="painting__paintings">Painting</a>
+                            </li>
+                            <li>
+                                <a href="photography">photography</a>
+                            </li> -->
+                        </ul>
+                      
+                    </li>
+                   
+                    <li>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">ANIMALS</a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li>
+                                <a  id="bears">Bears</a>
+                            </li>
+                            <li>
+                                <a  id="cats">Cats</a>
+                            </li>
+                           <!--  <li>
+                                <a href="kittens">Kittens</a>
+                            </li> -->
+                            <li>
+                                <a  id="dogs">Dogs</a>
+                            </li>
+                            <!-- <li>
+                                <a href="puppies">Puppies</a>
+                            </li> -->
                         </ul>
                     </li>
                     <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">tipo</a>
-                        
-                            <select id="subList" class="custom-select mr-sm-2" >
-                                
-                                <option id="dance"value="dance" >dance</option>
-                                <option id="fantasy"value="fantasy" selected>fantasy</option>
-                                
-                                <option id="horror"value="horror" >horror</option>
-                                <option id="architecture"value="architecture" >architecture</option>
-                                
-                            </select>
-                        
-                    </li>
-                    <li>
-                        <a href="#">Portfolio</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-                <div class="d-flex justify-content-center">
-                    <button  type="button" id="getListId" class="btn btn-info m-2">Get ListSelect</button> 
-                </div>
+                        <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">FICTION</a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu2">
+                            <li>
+                                <a  id="fantasy">Fantasy</a>
+                            </li>
+                            <li>
+                                <a  id="historical_fiction">Historical Fiction</a>
+                            </li>
+                            <!-- <li>
+                                <a href="horror">Humor</a>
+                            </li> -->
+                            <li>
+                                <a  id="literature">Literature</a>
+                            </li>
+                            <!-- <li>
+                                <a href="magic">Magic</a>
+                            </li> -->
+                            <li>
+                                <a  id="mystery_and_detective_stories">Mistery and Detective</a>
+                            </li>
+                            <!-- <li>
+                                <a href="plays">Plays</a>
+                            </li> -->
+                            <li>
+                                <a  id="poetry">Poetry</a>
+                            </li>
                 
+                            <!-- ne ho saltati  alcuni -->
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">SCIENCE E MATH</a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu3">
+                            <li>
+                                <a  id="biology">Biology</a>
+                            </li>
+                            <li>
+                                <a  id="chemistry">Chemistry</a>
+                            </li>
+                            <li>
+                                <a  id="mathematics">Mathematics</a>
+                            </li>
+                            
+                            <li>
+                                <a  id="programming">Programming</a>
+                            </li>
+                                                                       
+                            <!-- ne ho saltati  alcuni -->
+                        </ul>
+                    </li>
+                   
+                   
+                </ul>
+            
             </nav>
 
             <!-- Page Content  -->
@@ -110,11 +183,11 @@
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <button type="button" id="sidebarCollapse" class="btn btn-info">
-                                    <i class="fas fa-align-left"></i>
-                                    <span>Toggle Sidebar</span>
+                                    <i class="bi bi-layout-text-sidebar"></i>
+                                    <span>Book Categories</span>
                                 </button>
                             </div>
-                            <input type="text" class="form-control" id="searchTitle" placeholder="filter list title..." aria-label="" aria-describedby="basic-addon1">
+                            <input type="text" class="form-control" id="searchTitle" placeholder="filter by title..." aria-label="" aria-describedby="basic-addon1">
                         </div>
                         
 
@@ -126,13 +199,13 @@
                 <!-- content -->
                 <div class="container-fluid">
                     <div class="row"> 
-                        <div class="col-md-10 offset-1 col-sm-12" style="height: 50px;text-align: center;">
-                            <div class="spinner-border" role="status" style="display:'none'; margin:auto">
+                        <div class="col-md-10 offset-1 col-sm-12" style=" height: 50px;text-align: center;">
+                            <div class="spinner-border mb-2" role="status" style="display:'none'; margin:auto">
                             <span class="visually-hidden">Attendere...</span>
                         </div>
                     </div>
                 <!-- output card -->
-                    <div class="ml-2" id="output">
+                    <div class="" id="output">
 
                     </div>
                     

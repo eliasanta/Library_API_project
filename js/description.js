@@ -1,15 +1,15 @@
 class Description{
     constructor(){
         this.description = new Array();
-       // this.comments = new Comments();
+       
     }
     async showPostByUserKey(key){ 
-        document.getElementsByClassName("spinner-border")[0].style.display = "block";
+       
         try{
             const url = `https://openlibrary.org${key}.json`;
             
             this.data = await api.getFetch(url);  
-                    
+            //console.log(this.data)     
             this.showModal();
         }
         catch(e){

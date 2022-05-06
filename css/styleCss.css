@@ -7,9 +7,9 @@ body{
 table tr{
     text-align: center;
 }
-h1,h2,h3,h4{
+h1,h3,h4{
     text-align: center;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 #detailAlbumList .col-md-2, #detailAlbumList .col-sm-12{
     margin-top: 6px;
@@ -22,6 +22,12 @@ h1,h2,h3,h4{
 body {
     font-family: 'Poppins', sans-serif;
     background: #fafafa;
+}
+ .fixedSide {
+    position: fixed;
+    width: 150px;
+    top: 0;
+    bottom: 0;
 }
 
 p {
@@ -163,16 +169,34 @@ a.article:hover {
 
 #content {
     width: 100%;
-    padding: 20px;
+    padding: 2% 12% 2% 10%;
     min-height: 100vh;
     transition: all 0.3s;
+}
+.card {
+    width: 100%;
+    padding: 2% 7% 2% 7%;
+   
+}
+img{
+    border: 1px solid black;
+    border-radius: 3px;
+    height:300px;
+    width: 190px;
+}
+.author{
+    font-size:16px
+}
+#title{
+    min-width:150px;
+    max-width:260px;
 }
 
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     #sidebar {
         margin-left: -250px;
     }
@@ -181,5 +205,10 @@ a.article:hover {
     }
     #sidebarCollapse span {
         display: none;
+    }
+    #cardFormat{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
     }
 }
