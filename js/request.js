@@ -1,3 +1,4 @@
+
 class Request{
 
     async getFetch(url){
@@ -21,4 +22,17 @@ class Request{
             })
         return await response.json();
     }
+    async axiosFetch(url){
+        
+        axios.get(url)
+            .then(function (response) {
+                // handle success
+                console.log(response);
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })
+            
+            }
 }

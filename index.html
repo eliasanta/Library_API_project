@@ -36,183 +36,191 @@
                 </div>
                 <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Vedi copertina?</button>
+                
                 </div>
             </div>
             </div>
         </div>
         
 <!-- Modal sidebar-->
-        <div class="wrapper">
+        <div class="container">
             <!-- Sidebar  -->
-            <nav id="sidebar" data-toggle="collapse" >
-                <div class="sidebar-header">
-                    <h3>Categorie Libri</h3>
-                </div>
-
-                <ul class="list-unstyled components">
-                    <li class="active">
-                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">ARTS</a>
-                        <ul class="collapse list-unstyled" id="homeSubmenu">
-                            <li>
-                                <a  id="architecture">Architecture</a>
-                            </li>
-                            <li>
-                                <a  id="art__art_instruction">Art instruction</a>
-                            </li>
-                            <!-- <li>
-                                <a href="history_of_art__art__design_styles">Art history</a>
-                            </li> -->
-                            <li>
-                                <a  id="dance">Dance</a>
-                            </li>
-                            <li>
-                                <a  id="design">Design</a>
-                            </li>
-                           <!--  <li>
-                                <a href="fashion">Fashion</a>
-                            </li> -->
-                            <li>
-                                <a  id="film">Film</a>
-                            </li>
-                            <li>
-                                <a  id="graphic_design">Graphic Design</a>
-                            </li>
-                            <!-- <li>
-                                <a href="music">Music</a>
-                            </li> -->
-                            <li>
-                                <a  id="music_theory">Music Theory</a>
-                            </li>
-                            <li>
-                                <a  id="graphic_design">Graphic Design</a>
-                            </li>
-                            <!-- <li>
-                                <a href="painting__paintings">Painting</a>
-                            </li>
-                            <li>
-                                <a href="photography">photography</a>
-                            </li> -->
-                        </ul>
-                      
-                    </li>
-                   
-                    <li>
-                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">ANIMALS</a>
-                        <ul class="collapse list-unstyled" id="pageSubmenu">
-                            <li>
-                                <a  id="bears">Bears</a>
-                            </li>
-                            <li>
-                                <a  id="cats">Cats</a>
-                            </li>
-                           <!--  <li>
-                                <a href="kittens">Kittens</a>
-                            </li> -->
-                            <li>
-                                <a  id="dogs">Dogs</a>
-                            </li>
-                            <!-- <li>
-                                <a href="puppies">Puppies</a>
-                            </li> -->
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">FICTION</a>
-                        <ul class="collapse list-unstyled" id="pageSubmenu2">
-                            <li>
-                                <a  id="fantasy">Fantasy</a>
-                            </li>
-                            <li>
-                                <a  id="historical_fiction">Historical Fiction</a>
-                            </li>
-                            <!-- <li>
-                                <a href="horror">Humor</a>
-                            </li> -->
-                            <li>
-                                <a  id="literature">Literature</a>
-                            </li>
-                            <!-- <li>
-                                <a href="magic">Magic</a>
-                            </li> -->
-                            <li>
-                                <a  id="mystery_and_detective_stories">Mistery and Detective</a>
-                            </li>
-                            <!-- <li>
-                                <a href="plays">Plays</a>
-                            </li> -->
-                            <li>
-                                <a  id="poetry">Poetry</a>
-                            </li>
-                
-                            <!-- ne ho saltati  alcuni -->
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">SCIENCE E MATH</a>
-                        <ul class="collapse list-unstyled" id="pageSubmenu3">
-                            <li>
-                                <a  id="biology">Biology</a>
-                            </li>
-                            <li>
-                                <a  id="chemistry">Chemistry</a>
-                            </li>
-                            <li>
-                                <a  id="mathematics">Mathematics</a>
-                            </li>
-                            
-                            <li>
-                                <a  id="programming">Programming</a>
-                            </li>
-                                                                       
-                            <!-- ne ho saltati  alcuni -->
-                        </ul>
-                    </li>
-                   
-                   
-                </ul>
-            
-            </nav>
-
-            <!-- Page Content  -->
-            <div id="content">
-
-                <nav class="navbar mb-1 navbar-expand-lg navbar-light bg-light">
-                    <div class="container-fluid">
-
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <button type="button" id="sidebarCollapse" class="btn btn-info">
-                                    <i class="bi bi-layout-text-sidebar"></i>
-                                    <span>Book Categories</span>
-                                </button>
-                            </div>
-                            <input type="text" class="form-control" id="searchTitle" placeholder="filter by title..." aria-label="" aria-describedby="basic-addon1">
-                        </div>
-                        
-
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            
-                        </div>
-                    </div>
-                </nav>
-                <!-- content -->
-                <div class="container-fluid">
-                    <div class="row"> 
-                        <div class="col-md-10 offset-1 col-sm-12" style=" height: 50px;text-align: center;">
-                            <div class="spinner-border mb-2" role="status" style="display:'none'; margin:auto">
-                            <span class="visually-hidden">Attendere...</span>
-                        </div>
-                    </div>
-                <!-- output card -->
-                    <div class="" id="output">
-
+            <div class="row">
+            <div class="col-md-3">
+                <nav id="sidebar" data-toggle="collapse" class="fixedSide" >
+                    <div class="sidebar-header">
+                        <h3>Categorie Libri</h3>
                     </div>
                     
-                </div> 
 
+                    <ul class="list-unstyled components">
+                        <li class="active">
+                            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">ARTS</a>
+                            <ul class="collapse list-unstyled" id="homeSubmenu">
+                                <li>
+                                    <a  id="architecture">Architecture</a>
+                                </li>
+                                <li>
+                                    <a  id="art__art_instruction">Art instruction</a>
+                                </li>
+                                <!-- <li>
+                                    <a href="history_of_art__art__design_styles">Art history</a>
+                                </li> -->
+                                <li>
+                                    <a  id="dance">Dance</a>
+                                </li>
+                                <li>
+                                    <a  id="design">Design</a>
+                                </li>
+                            <!--  <li>
+                                    <a href="fashion">Fashion</a>
+                                </li> -->
+                                <li>
+                                    <a  id="film">Film</a>
+                                </li>
+                                <li>
+                                    <a  id="graphic_design">Graphic Design</a>
+                                </li>
+                                <!-- <li>
+                                    <a href="music">Music</a>
+                                </li> -->
+                                <li>
+                                    <a  id="music_theory">Music Theory</a>
+                                </li>
+                                <li>
+                                    <a  id="graphic_design">Graphic Design</a>
+                                </li>
+                                <!-- <li>
+                                    <a href="painting__paintings">Painting</a>
+                                </li>
+                                <li>
+                                    <a href="photography">photography</a>
+                                </li> -->
+                            </ul>
+                        
+                        </li>
+                    
+                        <li>
+                            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">ANIMALS</a>
+                            <ul class="collapse list-unstyled" id="pageSubmenu">
+                                <li>
+                                    <a  id="bears">Bears</a>
+                                </li>
+                                <li>
+                                    <a  id="cats">Cats</a>
+                                </li>
+                            <!--  <li>
+                                    <a href="kittens">Kittens</a>
+                                </li> -->
+                                <li>
+                                    <a  id="dogs">Dogs</a>
+                                </li>
+                                <!-- <li>
+                                    <a href="puppies">Puppies</a>
+                                </li> -->
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">FICTION</a>
+                            <ul class="collapse list-unstyled" id="pageSubmenu2">
+                                <li>
+                                    <a  id="fantasy">Fantasy</a>
+                                </li>
+                                <li>
+                                    <a  id="historical_fiction">Historical Fiction</a>
+                                </li>
+                                <!-- <li>
+                                    <a href="horror">Humor</a>
+                                </li> -->
+                                <li>
+                                    <a  id="literature">Literature</a>
+                                </li>
+                                <!-- <li>
+                                    <a href="magic">Magic</a>
+                                </li> -->
+                                <li>
+                                    <a  id="mystery_and_detective_stories">Mistery and Detective</a>
+                                </li>
+                                <!-- <li>
+                                    <a href="plays">Plays</a>
+                                </li> -->
+                                <li>
+                                    <a  id="poetry">Poetry</a>
+                                </li>
+                    
+                                <!-- ne ho saltati  alcuni -->
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">SCIENCE E MATH</a>
+                            <ul class="collapse list-unstyled" id="pageSubmenu3">
+                                <li>
+                                    <a  id="biology">Biology</a>
+                                </li>
+                                <li>
+                                    <a  id="chemistry">Chemistry</a>
+                                </li>
+                                <li>
+                                    <a  id="mathematics">Mathematics</a>
+                                </li>
+                                
+                                <li>
+                                    <a  id="programming">Programming</a>
+                                </li>
+                                                                        
+                                <!-- ne ho saltati  alcuni -->
+                            </ul>
+                        </li>
+                    
+                    
+                    </ul>
+                
+                </nav>
+            </div><!-- fine col 1 -->
+                <!-- Page Content  -->
+             
+                <div id="content" class="col-md-9 offset-1">
+
+                    <nav class="navbar mb-1 navbar-expand-lg navbar-light bg-light">
+                        <div class="container-fluid">
+
+                            <div class="input-group mb-3">                                
+                                <input type="text" class="form-control" id="searchTitle" placeholder="filter by title..." aria-label="" aria-describedby="basic-addon1">
+                                <div class="input-group-prepend">
+                                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                                        <i class="bi bi-layout-text-sidebar"></i>
+                                        <span>Book Categories</span>
+                                    </button>
+                                </div>
+                            </div>
+                            
+
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                
+                            </div>
+                        </div>
+                    </nav>
+                    <!-- content -->
+                    <div class="container-fluid">
+                        <div class="row"> 
+                            <div class="col-md-10 offset-1 col-sm-12" style=" height: 50px;text-align: center;">
+                                <div class="spinner-border mb-2" role="status" style="display:'none'; margin:auto">
+                                <span class="visually-hidden">Attendere...</span>
+                            </div>
+                        </div>
+                    <!-- output card -->
+                        <div class="" id="output">
+
+                        </div>
+                        
+                    </div> 
+
+                </div>
             </div>
         </div>
+      </div>
+      </div><!-- chiusura container -->
+
   
 
     </body>

@@ -122,8 +122,8 @@ ${elem.authors.map((ele) => `<div id="title" class="Lista Autori mb-4 mt-3"> Aut
                              </div>`)
                             .slice(0, 1)}
                         <div id="imageCover"><img  src="https://covers.openlibrary.org/b/olid/${elem.cover_edition_key}-M.jpg" /></div>
-                          <div>
-                            <button class='btn btn-success mt-3 text-center' data-bs-toggle="modal" data-bs-target="#modalDesc" onclick='showDescription("${elem.key}")'>Book Description</button>
+                          <div id="buttonDesc" class="align-self-end">
+                            <button class='btn btn-success mt-3 text-center ' data-bs-toggle="modal" data-bs-target="#modalDesc" onclick='showDescription("${elem.key}")'>Book Description</button>
                           </div>
                         </div>
                       </div> `;
