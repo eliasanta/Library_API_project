@@ -1,0 +1,1 @@
+import './css/style.css'; // connect css to template.html

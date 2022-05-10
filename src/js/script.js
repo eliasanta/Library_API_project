@@ -1,5 +1,8 @@
-//variabili const. Queste sono le URL delle API e non devono essere modificate
+/* import {Description} from "./description.js";
+import {Request} from "./request.js";
+import './css/style.css'; // connect css to template.html */
 
+//variabili const. Queste sono le URL delle API e non devono essere modificate
 const URL_DESCRIPTION = "https://openlibrary.org";
 const URL_USERS = "https://jsonplaceholder.typicode.com/users";
 const URL_PHOTOS = "https://jsonplaceholder.typicode.com/photos";
@@ -10,8 +13,6 @@ const URL_COMMENTS = "https://jsonplaceholder.typicode.com/comments";
 
 var api = new Request();
 var desc = new Description();
-
-
 
 let ListaLibri = []; //dove inserirò libri filtrati e non
 
@@ -24,17 +25,6 @@ $(document).ready(function () {
 });
 //*************************************************************************** */
 //************************************imposto un piccolo ritardo in quanto devono prima caricarsi gli script */
-/* setTimeout(() => {
-  document.getElementsByClassName("spinner-border")[0].style.display = "none";
-  
-  let btn = document.getElementById("getListId");
-  btn.addEventListener("click", function () {
-    let targetValue = document.getElementById("subList").value;
-    //in base a quello selezionato in lista carico i libri
-    recuperaUtenti(targetValue);
-  });
-}, 200);
- */
 
 //metodo alternativo per caricare lista Libri
 setTimeout(() => {
@@ -92,7 +82,6 @@ setTimeout(() => {
     printBooks(filteredBooks);
   });
 }, 100);
-
 
 async function recuperaUtenti(subject) {
   const URL_LIBRI = `https://openlibrary.org/subjects/${subject}.json`;
