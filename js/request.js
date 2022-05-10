@@ -22,12 +22,13 @@ class Request{
             })
         return await response.json();
     }
+    
     async axiosFetch(url){
         
-        axios.get(url)
-            .then(function (response) {
-                // handle success
-                console.log(response);
+        const data = await axios.get(url).then(function (response) {
+                console.log(data);
+                return response.data;
+               
             })
             .catch(function (error) {
                 // handle error

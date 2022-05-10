@@ -8,7 +8,7 @@ class Description{
         try{
             const url = `https://openlibrary.org${key}.json`;
             
-            this.data = await api.axiosFetch(url);  
+            this.data = await api.getFetch(url);  
             console.log(this.data)     
             this.showModal();
         }
