@@ -1,8 +1,6 @@
-/* import {Description} from "./description.js";
-import {Request} from "./request.js";
-import './css/style.css'; // connect css to template.html */
-
+/* 
 //variabili const. Queste sono le URL delle API e non devono essere modificate
+
 const URL_DESCRIPTION = "https://openlibrary.org";
 const URL_USERS = "https://jsonplaceholder.typicode.com/users";
 const URL_PHOTOS = "https://jsonplaceholder.typicode.com/photos";
@@ -16,18 +14,18 @@ var desc = new Description();
 
 let ListaLibri = []; //dove inserirò libri filtrati e non
 
-//**************************************************************for sidebar */
+//**************************************************************for sidebar 
 
 $(document).ready(function () {
   $("#sidebarCollapse").on("click", function () {
     $("#sidebar").toggleClass("active");
   });
-});
+}); */
 //*************************************************************************** */
 //************************************imposto un piccolo ritardo in quanto devono prima caricarsi gli script */
 
 //metodo alternativo per caricare lista Libri
-setTimeout(() => {
+/* setTimeout(() => {
     document.getElementsByClassName("spinner-border")[0].style.display = "none";
 
     myList=document.getElementById('homeSubmenu');
@@ -52,26 +50,26 @@ setTimeout(() => {
       recuperaUtenti(targetSub);
     });
   }, 200);
-
+ */
 /**
  * mostra il messaggio di errore nell'HTML
  * @param {string} message
  */
-function showMessageError(message) {
+/* export function showMessageError(message) {
   document.getElementById("errorTxt").textContent = message;
   document.getElementById("errorTxt").style.display = "block";
-}
+} */
 /**
  * nasconde il messaggio di errore nell'HTML
  */
-function hideMessageError() {
+/* xport function hideMessageError() {
   document.getElementById("errorTxt").style.display = none;
 }
 
 
 setTimeout(() => {
   const srcTitle = document.getElementById("searchTitle");
-  //********************funzione per filtrare la ricerca */
+  //********************funzione per filtrare la ricerca 
   srcTitle.addEventListener("keyup", (e) => {
     const SearchString = e.target.value.toLowerCase();
     //console.log(SearchString);per vedere cosa digito nel filter
@@ -83,7 +81,7 @@ setTimeout(() => {
   });
 }, 100);
 
-async function recuperaUtenti(subject) {
+export async function recuperaUtenti(subject) {
   const URL_LIBRI = `https://openlibrary.org/subjects/${subject}.json`;
   document.getElementsByClassName("spinner-border")[0].style.display = "block"; // visualizza lo spinner che viene disattivato alla conclusione della chiamata. Riga 44
   try {
@@ -120,14 +118,14 @@ ${elem.authors.map((ele) => `<div id="title" class="Lista Autori mb-4 mt-3"> Aut
 
   document.getElementById("output").innerHTML = str;
 }
-
-function showCover(cover){
+ */
+/* export function showCover(cover){
   //console.log(cover)
   cov.showCoverByUser(cover)
-}
+} */
 
 //creo la funzione per mostrarmi la descrizione
-function showDescription(userKey) {
+/* export function showDescription(userKey) {
   //gli ho passato la chiave
   desc.showPostByUserKey(userKey); //gli passo la chiave
-}
+} */

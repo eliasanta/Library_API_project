@@ -1,5 +1,5 @@
 
-/* export default  */class Request{
+ class Request{
 
     async getFetch(url){
         let response = await fetch(url); // la fetch restituisce una promise di conseguenza non è necessario scrivere la promise esplicitamente

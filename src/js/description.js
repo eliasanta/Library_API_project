@@ -1,4 +1,4 @@
-/* export default  */class Description{
+ class Description{
     constructor(){
         this.description = new Array();
        
