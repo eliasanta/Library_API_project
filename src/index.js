@@ -1,11 +1,9 @@
 import './css/style.css'; // connect css to template.html
+
 import { Description } from './js/description';
 import { Request } from './js/request';
 
-/* import {Description} from "./description.js";
-import {Request} from "./request.js"; */
 
-/* const URL_DESCRIPTION = "https://openlibrary.org"; */
 
 var api = new Request();
 var desc = new Description();
@@ -26,10 +24,10 @@ $(document).ready(function () {
 setTimeout(() => {
     document.getElementsByClassName("spinner-border")[0].style.display = "none";
 
-    myList=document.getElementById('homeSubmenu');
-    myList2=document.getElementById('pageSubmenu');
-    myList3=document.getElementById('pageSubmenu2');
-    myList4=document.getElementById('pageSubmenu3');
+    let myList=document.getElementById('homeSubmenu');
+    let myList2=document.getElementById('pageSubmenu');
+    let myList3=document.getElementById('pageSubmenu2');
+    let myList4=document.getElementById('pageSubmenu3');
 
     myList4.addEventListener("click", function (e) {
       let targetSub= e.target.id;
@@ -116,11 +114,6 @@ ${elem.authors.map((ele) => `<div id="title" class="Lista Autori mb-4 mt-3"> Aut
 
   document.getElementById("output").innerHTML = str;
 }
-
-/* export function showCover(cover){
-  //console.log(cover)
-  cov.showCoverByUser(cover)
-} */
 
 //creo la funzione per mostrarmi la descrizione
  function showDescription(userKey) {
