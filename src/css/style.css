@@ -3,6 +3,9 @@
 @import './mediaquery.css';
 @import './content.css';
 @import url('https://fonts.googleapis.com/css2?family=Whisper&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"); 
 
 body{
     font: 15px black Arial, sans-serif;
@@ -21,8 +24,6 @@ h1,h3,h4{
     margin-top: 6px;
 }
 
-
-/* @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";  */
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -52,6 +53,9 @@ a:focus {
     text-decoration: none;
     transition: all 0.3s;
 }
+li:hover{
+    cursor: pointer; 
+}
 
 .navbar {
     margin: 0 auto;
@@ -77,6 +81,7 @@ a:focus {
     margin: 40px 0;
 }
 #citation{
-    font-family: 'Whisper', cursive;
+    font-size:36px;
+    font-family: 'Lobster', cursive;
 }
 

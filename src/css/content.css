@@ -9,8 +9,7 @@
 .card {
     width: 100%;
     padding: 2% 7% 2% 7%;
-    
-   
+       
 }
 img{
     border: 1px solid black;
@@ -27,6 +26,7 @@ img{
 }
 .choosebook{
     margin-top: 100px;
+    
 }
 #name{
     margin-left: 60px;
