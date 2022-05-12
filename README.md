@@ -9,7 +9,7 @@ the toogle button "Book categories" will show you and hidden the books category 
 
 ## Screenshots
 
-![App Screenshot](/src/img/Screenshot_library_API_project.jpg)
+![App Screenshot](/src/img/Screenshot_library_API_project.png)
 
 
 ## Link
@@ -31,9 +31,8 @@ the toogle button "Book categories" will show you and hidden the books category 
  
 
 ## Links
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://lijo-belardi.github.io/)
 
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/lijo-belardi-25615918b/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/elia-santagiuliana-b10323143/)
 
 ## Contributions:
 
