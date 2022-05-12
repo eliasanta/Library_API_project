@@ -1,9 +1,5 @@
 {
-  "dependencies": {
-    "@babel/runtime": "^7.17.9",
-    "axios": "^0.27.2",
-    "bootstrap-icons": "^1.8.1"
-  },
+  
   "name": "library_api_project",
   "description": "[book-search](https://elia-searchbook-library.netlify.app/)",
   "version": "1.0.0",
@@ -25,6 +21,11 @@
     "webpack": "^5.72.1",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.9.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.17.9",
+    "axios": "^0.27.2",
+    "bootstrap-icons": "^1.8.1"
   },
   "scripts": {
     "dev": "webpack server --mode=development",

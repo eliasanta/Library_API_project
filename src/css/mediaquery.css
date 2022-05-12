@@ -1,0 +1,27 @@
+@media (max-width: 900px) {
+    #content {
+        width: 100%;
+        padding: 2% 12% 2% 10%;
+        min-height: 100vh;
+        margin-left:0px;
+    }
+    
+    
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+    #cardFormat{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+    
+  
+   
+}

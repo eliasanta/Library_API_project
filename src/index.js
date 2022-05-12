@@ -1,12 +1,7 @@
-import './css/style.css'; // connect css to template.html
-
-import { Description } from './js/description';
-import { Request } from './js/request';
-
-
-
-var api = new Request();
-var desc = new Description();
+import "./css/style.css"; // connect css to template.html
+import { displayBookDescription } from "./js/displayDescription";
+import { printBooks } from "./js/printBooks";
+import axios from "axios";
 
 let ListaLibri = []; //dove inserirò libri filtrati e non
 
@@ -22,46 +17,30 @@ $(document).ready(function () {
 
 //metodo alternativo per caricare lista Libri
 setTimeout(() => {
-    document.getElementsByClassName("spinner-border")[0].style.display = "none";
+  document.getElementsByClassName("spinner-border")[0].style.display = "none";
 
-    let myList=document.getElementById('homeSubmenu');
-    let myList2=document.getElementById('pageSubmenu');
-    let myList3=document.getElementById('pageSubmenu2');
-    let myList4=document.getElementById('pageSubmenu3');
+  let myList = document.getElementById("homeSubmenu");
+  let myList2 = document.getElementById("pageSubmenu");
+  let myList3 = document.getElementById("pageSubmenu2");
+  let myList4 = document.getElementById("pageSubmenu3");
 
-    myList4.addEventListener("click", function (e) {
-      let targetSub= e.target.id;
-      recuperaUtenti(targetSub);
-    });
-    myList3.addEventListener("click", function (e) {
-      let targetSub= e.target.id;
-      recuperaUtenti(targetSub);
-    });
-    myList2.addEventListener("click", function (e) {
-      let targetSub= e.target.id;
-      recuperaUtenti(targetSub);
-    });
-    myList.addEventListener("click", function (e) {
-      let targetSub= e.target.id;
-      recuperaUtenti(targetSub);
-    });
-  }, 200);
-
-/**
- * mostra il messaggio di errore nell'HTML
- * @param {string} message
- */
- function showMessageError(message) {
-  document.getElementById("errorTxt").textContent = message;
-  document.getElementById("errorTxt").style.display = "block";
-}
-/**
- * nasconde il messaggio di errore nell'HTML
- */
- function hideMessageError() {
-  document.getElementById("errorTxt").style.display = none;
-}
-
+  myList4.addEventListener("click", function (e) {
+    let targetSub = e.target.id;
+    recuperaUtenti(targetSub);
+  });
+  myList3.addEventListener("click", function (e) {
+    let targetSub = e.target.id;
+    recuperaUtenti(targetSub);
+  });
+  myList2.addEventListener("click", function (e) {
+    let targetSub = e.target.id;
+    recuperaUtenti(targetSub);
+  });
+  myList.addEventListener("click", function (e) {
+    let targetSub = e.target.id;
+    recuperaUtenti(targetSub);
+  });
+}, 200);
 
 setTimeout(() => {
   const srcTitle = document.getElementById("searchTitle");
@@ -77,46 +56,17 @@ setTimeout(() => {
   });
 }, 100);
 
- async function recuperaUtenti(subject) {
+async function recuperaUtenti(subject) {
   const URL_LIBRI = `https://openlibrary.org/subjects/${subject}.json`;
   document.getElementsByClassName("spinner-border")[0].style.display = "block"; // visualizza lo spinner che viene disattivato alla conclusione della chiamata. Riga 44
   try {
-    ListaLibri = await api.getFetch(URL_LIBRI);
-    printBooks(ListaLibri.works);
-
+    ListaLibri = await axios.get(URL_LIBRI);
+    let axiosBooks = ListaLibri.data.works;
+    printBooks(axiosBooks);
+    displayBookDescription();
   } catch (e) {
     console.log(e);
   } finally {
     document.getElementsByClassName("spinner-border")[0].style.display = "none";
   }
-}
-
-function printBooks(elemResp) {
-  //passo oggetto completo 
-  let str = `<h2 class="mb-4 text-center">Lista libri</h2>`;
-  elemResp.forEach((elem) => {
-    str += `<div  class="card card-body mb-5 p-3">
-                    <h4 class="mt-2 mb-2">${elem.title}</h4>
-                        <div id="cardFormat" class="d-flex justify-content-around mt-3 mb-3">                          
-${elem.authors.map((ele) => `<div id="title" class="Lista Autori mb-4 mt-3"> Autore:
-                                <div id="author" class="mt-3">
-                                ${ele.name}
-                                </div>
-                             </div>`)
-                            .slice(0, 1)}
-                        <div id="imageCover"><img  src="https://covers.openlibrary.org/b/olid/${elem.cover_edition_key}-M.jpg" /></div>
-                          <div id="buttonDesc" class="align-self-end">
-                            <button class='btn btn-success mt-3 text-center ' data-bs-toggle="modal" data-bs-target="#modalDesc" onclick='showDescription("${elem.key}")'>Book Description</button>
-                          </div>
-                        </div>
-                      </div> `;
-  });
-
-  document.getElementById("output").innerHTML = str;
-}
-
-//creo la funzione per mostrarmi la descrizione
- function showDescription(userKey) {
-  //gli ho passato la chiave
-  desc.showPostByUserKey(userKey); //gli passo la chiave
 }
