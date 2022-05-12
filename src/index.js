@@ -5,17 +5,16 @@ import axios from "axios";
 
 let ListaLibri = []; //dove inserirò libri filtrati e non
 
-//**************************************************************for sidebar */
+//***********************************for sidebar */
 
 $(document).ready(function () {
   $("#sidebarCollapse").on("click", function () {
     $("#sidebar").toggleClass("active");
   });
 });
-//*************************************************************************** */
-//************************************imposto un piccolo ritardo in quanto devono prima caricarsi gli script */
+//************************************ */
+//*****imposto un piccolo ritardo in quanto devono prima caricarsi gli script */
 
-//metodo alternativo per caricare lista Libri
 setTimeout(() => {
   document.getElementsByClassName("spinner-border")[0].style.display = "none";
 
@@ -23,7 +22,12 @@ setTimeout(() => {
   let myList2 = document.getElementById("pageSubmenu");
   let myList3 = document.getElementById("pageSubmenu2");
   let myList4 = document.getElementById("pageSubmenu3");
+  let myList5 = document.getElementById("pageSubmenu4");
 
+  myList5.addEventListener("click", function (e) {
+    let targetSub = e.target.id;
+    recuperaUtenti(targetSub);
+  });
   myList4.addEventListener("click", function (e) {
     let targetSub = e.target.id;
     recuperaUtenti(targetSub);
