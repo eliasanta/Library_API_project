@@ -49,16 +49,18 @@ setTimeout(() => {
 setTimeout(() => {
   const srcTitle = document.getElementById("searchTitle");
   //********************funzione per filtrare la ricerca */
+
   srcTitle.addEventListener("keyup", (e) => {
     const SearchString = e.target.value.toLowerCase();
     //console.log(SearchString);per vedere cosa digito nel filter
-    const filteredBooks = ListaLibri.works.filter((book) => {
+    //console.log(ListaLibri.data.works)//il problema è che la chiamata era stata fatta con axios
+    const filteredBooks = ListaLibri.data.works.filter((book) => {
       return book.title.toLowerCase().includes(SearchString);
     });
-
     printBooks(filteredBooks);
   });
-}, 100);
+}, 200);
+
 
 async function recuperaUtenti(subject) {
   const URL_LIBRI = `https://openlibrary.org/subjects/${subject}.json`;

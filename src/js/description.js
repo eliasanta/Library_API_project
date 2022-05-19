@@ -9,7 +9,7 @@ export class Description {
     try {
       const url = `https://openlibrary.org${key}.json`;
       this.data = await api.getFetch(url);
-      console.log(this.data);
+      //console.log(this.data);
       this.showModal();
     } catch (e) {
       console.log("errore posts: " + e);

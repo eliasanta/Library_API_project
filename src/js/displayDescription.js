@@ -5,7 +5,6 @@ export const displayBookDescription = async () => {
   try {
     // take all description-buttons
     const descriptionButton = document.querySelectorAll(".description-button");
-
     // addEventListener
     descriptionButton.forEach((button) => {
       button.addEventListener("click", (e) => {
