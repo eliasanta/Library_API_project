@@ -1,9 +1,8 @@
-
 export function printBooks(elemResp) {
-    //passo oggetto completo
-    let str = `<h2 class="mb-4 text-center">Books List</h2>`;
-    elemResp.forEach((elem) => {
-      str += `<div  class="card card-body mb-5 p-3">
+  //passo oggetto completo
+  let str = `<h2 class="mb-4 text-center">Books List</h2>`;
+  elemResp.forEach((elem) => {
+    str += `<div  class="card card-body mb-5 p-3">
                       <h4 class="mt-2 mb-2">${elem.title}</h4>
                           <div id="cardFormat" class="d-flex justify-content-around mt-3 mb-3">                          
   ${elem.authors
@@ -25,9 +24,7 @@ export function printBooks(elemResp) {
                             </div>
                           </div>
                         </div> `;
-    });
-    document.getElementById('choose').style.display='none';
-    document.getElementById("output").innerHTML = str;
-    
-  }
-  
+  });
+  document.getElementById("choose").style.display = "none";
+  document.getElementById("output").innerHTML = str;
+}
